@@ -1,5 +1,7 @@
+# Pertemuan 9
 # Materi Limit Trigonometri
 
+[Slide](https://anindito.github.io/kalkulus1/pertemuan09/)
 ## Pendahuluan
 
 Limit fungsi trigonometri merupakan salah satu konsep penting dalam kalkulus yang mempelajari perilaku fungsi trigonometri ketika variabelnya mendekati suatu nilai tertentu. Pemahaman tentang limit trigonometri sangat diperlukan dalam menganalisis kontinuitas fungsi, turunan, dan aplikasi matematika lanjutan.
