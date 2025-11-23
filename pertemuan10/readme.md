@@ -1,6 +1,7 @@
 # Turunan Fungsi (Derivatives)
 
 **Penyusun:** Anindito , S.Kom., S.S., S.H., MTI., CHFI.
+
 **Materi:** Kalkulus 1/Matematika Militer Dasar
 
 ---
