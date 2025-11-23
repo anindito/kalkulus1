@@ -1,9 +1,11 @@
+# Pertemuan 10
 # Turunan Fungsi (Derivatives)
 
 **Penyusun:** Anindito , S.Kom., S.S., S.H., MTI., CHFI.
 
 **Materi:** Kalkulus 1/Matematika Militer Dasar
 
+[Slide](https://anindito.github.io/kalkulus1/pertemuan10/)
 ---
 
 ## Daftar Isi
