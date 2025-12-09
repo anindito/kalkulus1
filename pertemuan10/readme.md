@@ -5,7 +5,7 @@
 **Materi:** Kalkulus Diferensial
 
 ---
-
+[Slide](https://anindito.github.io/kalkulus1/pertemuan10/)
 ## Daftar Isi
 
 1. [Pendahuluan](#pendahuluan)
