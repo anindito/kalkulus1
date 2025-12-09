@@ -3,6 +3,7 @@
 
 
 ---
+[Slide](https://anindito.github.io/kalkulus1/pertemuan11/)
 
 ## Daftar Isi
 
