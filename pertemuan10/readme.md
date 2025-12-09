@@ -1,560 +1,566 @@
-# Pertemuan 10
-# Turunan Fungsi (Derivatives)
+# Turunan Fungsi Trigonometri
+## Materi Komprehensif Kalkulus
 
-**Penyusun:** Anindito , S.Kom., S.S., S.H., MTI., CHFI.
+**Penyusun:** Berdasarkan materi Nadiza Lediwara, S.T., M.Eng
 
-**Materi:** Kalkulus 1/Matematika Militer Dasar
-
-[Slide](https://anindito.github.io/kalkulus1/pertemuan10/)
 ---
 
 ## Daftar Isi
 
 1. [Pendahuluan](#pendahuluan)
-2. [Konsep Turunan Fungsi](#konsep-turunan-fungsi)
-3. [Turunan Fungsi Konstan](#turunan-fungsi-konstan)
-4. [Sifat-Sifat Turunan Fungsi](#sifat-sifat-turunan-fungsi)
-5. [Aturan Rantai untuk Fungsi Komposisi](#aturan-rantai-untuk-fungsi-komposisi)
-6. [Contoh Soal dan Pembahasan](#contoh-soal-dan-pembahasan)
-7. [Latihan Soal](#latihan-soal)
-8. [Rangkuman](#rangkuman)
+2. [Konsep Dasar Limit dalam Turunan](#konsep-dasar-limit-dalam-turunan)
+3. [Turunan Fungsi Sinus](#turunan-fungsi-sinus)
+4. [Turunan Fungsi Cosinus](#turunan-fungsi-cosinus)
+5. [Turunan Fungsi Tangen](#turunan-fungsi-tangen)
+6. [Turunan Fungsi Cotangen](#turunan-fungsi-cotangen)
+7. [Turunan Fungsi Secan](#turunan-fungsi-secan)
+8. [Turunan Fungsi Cosecan](#turunan-fungsi-cosecan)
+9. [Aturan Rantai pada Fungsi Trigonometri](#aturan-rantai-pada-fungsi-trigonometri)
+10. [Contoh Soal dan Pembahasan](#contoh-soal-dan-pembahasan)
+11. [Latihan Mandiri](#latihan-mandiri)
+12. [Ringkasan Rumus](#ringkasan-rumus)
 
 ---
 
-## 1. Pendahuluan
+## Pendahuluan
 
-Turunan fungsi adalah salah satu konsep fundamental dalam kalkulus yang memiliki aplikasi luas dalam berbagai bidang seperti fisika, ekonomi, teknik, dan ilmu komputer. Turunan menggambarkan laju perubahan suatu fungsi terhadap variabelnya.
+Turunan fungsi trigonometri merupakan salah satu topik fundamental dalam kalkulus diferensial. Pemahaman yang baik tentang turunan fungsi-fungsi trigonometri sangat penting karena:
 
-### Aplikasi Turunan dalam Kehidupan:
-- **Fisika**: Kecepatan adalah turunan dari posisi terhadap waktu
-- **Ekonomi**: Marginal cost dan marginal revenue
-- **Teknik**: Optimasi desain dan analisis sistem
-- **Biologi**: Laju pertumbuhan populasi
+1. **Aplikasi dalam Fisika:** Analisis gerak harmonik, gelombang, dan osilasi
+2. **Teknik Elektro:** Analisis sinyal AC dan rangkaian listrik
+3. **Teknik Mesin:** Analisis getaran dan dinamika
+4. **Matematika Lanjut:** Dasar untuk integral trigonometri dan persamaan diferensial
 
----
+### Prasyarat Pengetahuan
 
-## 2. Konsep Turunan Fungsi
+Sebelum mempelajari materi ini, pastikan Anda memahami:
 
-### 2.1 Definisi Turunan
-
-Jika sebuah fungsi dimisalkan sebagai **y = f(x)**, maka turunan dari fungsi tersebut dituliskan sebagai **y' = f'(x)** atau dapat juga ditulis sebagai **dy/dx**, yang artinya fungsi y diturunkan terhadap variabel x.
-
-### 2.2 Definisi Formal Menggunakan Limit
-
-Turunan fungsi f yang dinotasikan sebagai f' atau dengan notasi lainnya, merupakan sebuah fungsi yang nilainya pada sebarang nilai c adalah:
-
-```
-f'(c) = lim[h→0] [f(c + h) - f(c)] / h
-```
-
-Definisi ini menjelaskan bahwa turunan di titik c adalah limit dari rasio perubahan fungsi ketika perubahan variabel independen (h) mendekati nol.
-
-### 2.3 Interpretasi Geometris
-
-Secara geometris, turunan f'(c) merepresentasikan **kemiringan (slope) garis singgung** terhadap kurva y = f(x) pada titik (c, f(c)).
-
-### 2.4 Interpretasi Fisik
-
-Jika f(t) merepresentasikan posisi suatu objek pada waktu t, maka f'(t) merepresentasikan **kecepatan sesaat** objek tersebut pada waktu t.
-
-### 2.5 Notasi Turunan
-
-Ada beberapa notasi yang umum digunakan untuk menyatakan turunan:
-
-1. **Notasi Lagrange**: f'(x), y'
-2. **Notasi Leibniz**: dy/dx, df/dx
-3. **Notasi Newton**: ẏ (dot notation)
-4. **Notasi Euler**: Df, Dₓf
+- Definisi turunan menggunakan limit
+- Identitas trigonometri dasar
+- Aturan-aturan turunan (aturan hasil kali, hasil bagi, dan rantai)
+- Nilai limit trigonometri khusus
 
 ---
 
-## 3. Turunan Fungsi Konstan
+## Konsep Dasar Limit dalam Turunan
 
-### 3.1 Aturan Fungsi Konstan
+### Definisi Turunan
 
-**Teorema**: Jika f(x) = k dengan k suatu konstanta, maka untuk sebarang x:
+Turunan fungsi f(x) didefinisikan sebagai:
 
-```
-f'(x) = 0
-```
+$$f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$$
 
-### 3.2 Pembuktian
+### Limit Trigonometri Penting
+
+Dalam menurunkan rumus turunan fungsi trigonometri, kita memerlukan dua limit fundamental:
+
+#### Limit Pertama
+$$\lim_{x \to 0} \frac{\sin x}{x} = 1$$
+
+**Interpretasi geometris:** Ketika sudut x mendekati nol, panjang busur (sin x) mendekati panjang tali busur (x dalam radian).
+
+#### Limit Kedua
+$$\lim_{x \to 0} \frac{\cos x - 1}{x} = 0$$
+
+**Catatan:** Limit ini juga dapat ditulis sebagai:
+$$\lim_{x \to 0} \frac{1 - \cos x}{x} = 0$$
+
+### Identitas Trigonometri yang Diperlukan
+
+#### Rumus Penjumlahan Sudut
+
+| Identitas | Rumus |
+|-----------|-------|
+| sin(A + B) | sin A cos B + cos A sin B |
+| sin(A - B) | sin A cos B - cos A sin B |
+| cos(A + B) | cos A cos B - sin A sin B |
+| cos(A - B) | cos A cos B + sin A sin B |
+
+#### Identitas Pythagoras
+
+$$\sin^2 x + \cos^2 x = 1$$
+$$1 + \tan^2 x = \sec^2 x$$
+$$1 + \cot^2 x = \csc^2 x$$
+
+---
+
+## Turunan Fungsi Sinus
+
+### Teorema
+
+$$\frac{d}{dx}(\sin x) = \cos x$$
+
+Atau dalam notasi Lagrange:
+$$f(x) = \sin x \Rightarrow f'(x) = \cos x$$
+
+### Pembuktian Lengkap
 
 Menggunakan definisi turunan:
 
-```
-f'(x) = lim[h→0] [f(x + h) - f(x)] / h
-      = lim[h→0] [k - k] / h
-      = lim[h→0] 0 / h
-      = 0
-```
+**Langkah 1:** Tuliskan definisi turunan
+$$f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$$
 
-### 3.3 Contoh
+**Langkah 2:** Substitusi f(x) = sin x
+$$f'(x) = \lim_{h \to 0} \frac{\sin(x+h) - \sin x}{h}$$
 
-**Contoh 1**: Dengan definisi, tentukan turunan dari f(x) = 10
+**Langkah 3:** Gunakan identitas sin(A + B) = sin A cos B + cos A sin B
+$$f'(x) = \lim_{h \to 0} \frac{\sin x \cos h + \cos x \sin h - \sin x}{h}$$
 
-**Penyelesaian**:
-```
-f'(x) = lim[h→0] [f(x + h) - f(x)] / h
-      = lim[h→0] [10 - 10] / h
-      = lim[h→0] 0 / h
-      = 0
-```
+**Langkah 4:** Kelompokkan suku-suku yang mengandung sin x
+$$f'(x) = \lim_{h \to 0} \frac{\sin x (\cos h - 1) + \cos x \sin h}{h}$$
 
-**Kesimpulan**: Turunan dari fungsi konstan f(x) = 10 adalah f'(x) = 0
+**Langkah 5:** Pisahkan menjadi dua limit
+$$f'(x) = \lim_{h \to 0} \left[ \sin x \cdot \frac{\cos h - 1}{h} + \cos x \cdot \frac{\sin h}{h} \right]$$
 
-### 3.4 Interpretasi
+**Langkah 6:** Distribusikan limit
+$$f'(x) = \sin x \cdot \lim_{h \to 0} \frac{\cos h - 1}{h} + \cos x \cdot \lim_{h \to 0} \frac{\sin h}{h}$$
 
-Fungsi konstan memiliki grafik berupa garis horizontal. Karena tidak ada perubahan nilai fungsi saat x berubah, maka laju perubahannya (turunan) adalah nol.
+**Langkah 7:** Substitusi nilai limit yang diketahui
+- $\lim_{h \to 0} \frac{\cos h - 1}{h} = 0$
+- $\lim_{h \to 0} \frac{\sin h}{h} = 1$
 
----
+$$f'(x) = \sin x \cdot 0 + \cos x \cdot 1$$
 
-## 4. Sifat-Sifat Turunan Fungsi
+**Langkah 8:** Sederhanakan
+$$f'(x) = \cos x$$
 
-### 4.1 Turunan Fungsi Konstan
-```
-Jika y = a, maka y' = 0
-```
+### Interpretasi Grafis
 
-**Penjelasan**: Nilai fungsi tidak berubah terhadap perubahan x.
+Grafik turunan sin x adalah cos x, yang menunjukkan:
+- Ketika sin x mencapai maksimum (x = π/2), gradiennya = 0, dan cos(π/2) = 0 ✓
+- Ketika sin x = 0 dan naik (x = 0), gradiennya maksimum, dan cos(0) = 1 ✓
+- Ketika sin x = 0 dan turun (x = π), gradiennya minimum, dan cos(π) = -1 ✓
 
 ---
 
-### 4.2 Turunan Fungsi Linear
-```
-Jika y = ax, maka y' = a
-```
+## Turunan Fungsi Cosinus
 
-**Penjelasan**: Laju perubahan fungsi linear adalah konstan, yaitu koefisien dari x.
+### Teorema
 
-**Contoh**:
-- Jika y = 5x, maka y' = 5
-- Jika y = -3x, maka y' = -3
+$$\frac{d}{dx}(\cos x) = -\sin x$$
 
----
+Atau dalam notasi Lagrange:
+$$f(x) = \cos x \Rightarrow f'(x) = -\sin x$$
 
-### 4.3 Aturan Pangkat (Power Rule)
-```
-Jika y = axⁿ, maka y' = an·xⁿ⁻¹
-```
+### Pembuktian Lengkap
 
-**Penjelasan**: Turunkan dengan menurunkan pangkat menjadi koefisien dan mengurangi pangkat sebesar 1.
+**Langkah 1:** Tuliskan definisi turunan
+$$f'(x) = \lim_{h \to 0} \frac{\cos(x+h) - \cos x}{h}$$
 
-**Contoh**:
-- Jika y = x⁵, maka y' = 5x⁴
-- Jika y = 3x⁴, maka y' = 12x³
-- Jika y = x², maka y' = 2x
-- Jika y = x⁻², maka y' = -2x⁻³
+**Langkah 2:** Gunakan identitas cos(A + B) = cos A cos B - sin A sin B
+$$f'(x) = \lim_{h \to 0} \frac{\cos x \cos h - \sin x \sin h - \cos x}{h}$$
 
-**Pembuktian Aturan Pangkat** (untuk n bilangan bulat positif):
+**Langkah 3:** Kelompokkan suku-suku yang mengandung cos x
+$$f'(x) = \lim_{h \to 0} \frac{\cos x (\cos h - 1) - \sin x \sin h}{h}$$
 
-Menggunakan ekspansi binomial:
-```
-f'(x) = lim[h→0] [(x+h)ⁿ - xⁿ] / h
-```
+**Langkah 4:** Pisahkan menjadi dua limit
+$$f'(x) = \cos x \cdot \lim_{h \to 0} \frac{\cos h - 1}{h} - \sin x \cdot \lim_{h \to 0} \frac{\sin h}{h}$$
 
-Menggunakan ekspansi binomial Newton untuk (x+h)ⁿ:
-```
-(x+h)ⁿ = xⁿ + nxⁿ⁻¹h + [n(n-1)/2]xⁿ⁻²h² + ... + hⁿ
-```
+**Langkah 5:** Substitusi nilai limit
+$$f'(x) = \cos x \cdot 0 - \sin x \cdot 1$$
 
-Maka:
-```
-f'(x) = lim[h→0] [nxⁿ⁻¹h + [n(n-1)/2]xⁿ⁻²h² + ... + hⁿ] / h
-      = lim[h→0] [nxⁿ⁻¹ + [n(n-1)/2]xⁿ⁻²h + ... + hⁿ⁻¹]
-      = nxⁿ⁻¹
-```
+**Langkah 6:** Sederhanakan
+$$f'(x) = -\sin x$$
+
+### Catatan Penting
+
+Perhatikan tanda negatif! Ini adalah kesalahan umum yang sering terjadi. Turunan cos x adalah **negatif** sin x.
 
 ---
 
-### 4.4 Aturan Penjumlahan dan Pengurangan
-```
-Jika f(x) = u ± v, maka y' = u' ± v'
-```
+## Turunan Fungsi Tangen
 
-**Penjelasan**: Turunan dari jumlah atau selisih fungsi adalah jumlah atau selisih dari turunan masing-masing fungsi.
+### Teorema
 
-**Contoh**:
-- Jika f(x) = x³ + 2x², maka f'(x) = 3x² + 4x
-- Jika f(x) = 5x⁴ - 3x² + 7, maka f'(x) = 20x³ - 6x
+$$\frac{d}{dx}(\tan x) = \sec^2 x$$
 
----
+### Pembuktian menggunakan Aturan Hasil Bagi
 
-### 4.5 Aturan Perkalian (Product Rule)
-```
-Jika y = u·v, maka y' = u'·v + u·v'
-```
+Karena $\tan x = \frac{\sin x}{\cos x}$, kita gunakan aturan hasil bagi:
 
-**Penjelasan**: Turunan dari perkalian dua fungsi adalah turunan fungsi pertama dikali fungsi kedua, ditambah fungsi pertama dikali turunan fungsi kedua.
+$$\frac{d}{dx}\left(\frac{u}{v}\right) = \frac{u'v - uv'}{v^2}$$
 
-**Pembuktian**:
-```
-f'(x) = lim[h→0] [u(x+h)v(x+h) - u(x)v(x)] / h
-```
+dengan u = sin x dan v = cos x.
 
-Tambahkan dan kurangkan u(x)v(x+h):
-```
-= lim[h→0] [u(x+h)v(x+h) - u(x)v(x+h) + u(x)v(x+h) - u(x)v(x)] / h
-= lim[h→0] [v(x+h)·(u(x+h) - u(x))/h + u(x)·(v(x+h) - v(x))/h]
-= v(x)·u'(x) + u(x)·v'(x)
-```
+**Langkah 1:** Tentukan u, v, u', dan v'
+- u = sin x → u' = cos x
+- v = cos x → v' = -sin x
 
-**Contoh**:
-- Jika y = (2x + 1)(x² - 3), maka:
-  - u = 2x + 1, u' = 2
-  - v = x² - 3, v' = 2x
-  - y' = 2(x² - 3) + (2x + 1)(2x) = 2x² - 6 + 4x² + 2x = 6x² + 2x - 6
+**Langkah 2:** Terapkan aturan hasil bagi
+$$\frac{d}{dx}(\tan x) = \frac{(\cos x)(\cos x) - (\sin x)(-\sin x)}{\cos^2 x}$$
 
----
+**Langkah 3:** Sederhanakan pembilang
+$$= \frac{\cos^2 x + \sin^2 x}{\cos^2 x}$$
 
-### 4.6 Aturan Pembagian (Quotient Rule)
-```
-Jika y = u/v, maka y' = (u'·v - u·v') / v²
-```
+**Langkah 4:** Gunakan identitas Pythagoras
+$$= \frac{1}{\cos^2 x}$$
 
-**Penjelasan**: Turunan dari pembagian dua fungsi mengikuti rumus "turunan atas dikali bawah, kurang atas dikali turunan bawah, semua dibagi bawah kuadrat".
+**Langkah 5:** Ubah ke bentuk secan
+$$= \sec^2 x$$
 
-**Pembuktian**:
+### Bentuk Alternatif
 
-Misalkan f(x) = u(x)/v(x), maka:
-```
-f(x)·v(x) = u(x)
-```
+Turunan tan x juga dapat ditulis sebagai:
+$$\frac{d}{dx}(\tan x) = 1 + \tan^2 x$$
 
-Turunkan kedua ruas (gunakan aturan perkalian):
-```
-f'(x)·v(x) + f(x)·v'(x) = u'(x)
-f'(x)·v(x) = u'(x) - f(x)·v'(x)
-f'(x) = [u'(x) - (u(x)/v(x))·v'(x)] / v(x)
-f'(x) = [u'(x)·v(x) - u(x)·v'(x)] / v²(x)
-```
-
-**Contoh**:
-- Jika y = (x² + 1)/(x - 2), maka:
-  - u = x² + 1, u' = 2x
-  - v = x - 2, v' = 1
-  - y' = [2x(x - 2) - (x² + 1)(1)] / (x - 2)²
-  - y' = [2x² - 4x - x² - 1] / (x - 2)²
-  - y' = [x² - 4x - 1] / (x - 2)²
+Ini dapat dibuktikan menggunakan identitas $\sec^2 x = 1 + \tan^2 x$.
 
 ---
 
-## 5. Aturan Rantai untuk Fungsi Komposisi
+## Turunan Fungsi Cotangen
 
-### 5.1 Definisi Fungsi Komposisi
+### Teorema
 
-Andaikan fungsi y = f(u) dan u = g(x) dengan f sebagai fungsi u dan g sebagai fungsi x.
+$$\frac{d}{dx}(\cot x) = -\csc^2 x$$
 
-Maka fungsi komposisi y = f(g(x)) dapat diturunkan di titik x dan berlaku:
+### Pembuktian
 
-```
-dy/dx = (dy/du) · (du/dx)
-```
+Karena $\cot x = \frac{\cos x}{\sin x}$, kita gunakan aturan hasil bagi:
 
-### 5.2 Notasi Alternatif
+**Langkah 1:** Tentukan u, v, u', dan v'
+- u = cos x → u' = -sin x
+- v = sin x → v' = cos x
 
-Jika y adalah fungsi komposisi dari u yang merupakan fungsi dari x, maka:
+**Langkah 2:** Terapkan aturan hasil bagi
+$$\frac{d}{dx}(\cot x) = \frac{(-\sin x)(\sin x) - (\cos x)(\cos x)}{\sin^2 x}$$
 
-```
-y = f(u) dengan u = g(x)
-y' = f'(u) · g'(x)
-```
+**Langkah 3:** Sederhanakan pembilang
+$$= \frac{-\sin^2 x - \cos^2 x}{\sin^2 x}$$
 
-Atau dalam notasi yang lebih eksplisit:
-```
-d/dx[f(g(x))] = f'(g(x)) · g'(x)
-```
+**Langkah 4:** Faktorkan tanda negatif dan gunakan identitas Pythagoras
+$$= \frac{-(\sin^2 x + \cos^2 x)}{\sin^2 x} = \frac{-1}{\sin^2 x}$$
 
-### 5.3 Pembuktian Aturan Rantai
-
-Misalkan y = f(u) dan u = g(x), maka:
-
-```
-dy/dx = lim[Δx→0] Δy/Δx
-```
-
-Kalikan dan bagi dengan Δu:
-```
-dy/dx = lim[Δx→0] (Δy/Δu) · (Δu/Δx)
-```
-
-Karena u kontinu di x (asumsi), maka ketika Δx → 0, juga Δu → 0:
-```
-dy/dx = lim[Δu→0] (Δy/Δu) · lim[Δx→0] (Δu/Δx)
-      = (dy/du) · (du/dx)
-```
-
-### 5.4 Interpretasi
-
-Aturan rantai memberitahu kita bahwa laju perubahan y terhadap x adalah hasil kali dari:
-- Laju perubahan y terhadap u
-- Laju perubahan u terhadap x
-
-### 5.5 Contoh Aplikasi Aturan Rantai
-
-**Contoh 1**: Tentukan turunan dari y = (x² + 3x)⁵
-
-**Penyelesaian**:
-- Misalkan u = x² + 3x, maka y = u⁵
-- dy/du = 5u⁴
-- du/dx = 2x + 3
-- dy/dx = (dy/du) · (du/dx) = 5u⁴ · (2x + 3) = 5(x² + 3x)⁴ · (2x + 3)
-
-**Contoh 2**: Tentukan turunan dari y = √(2x + 5)
-
-**Penyelesaian**:
-- Tulis ulang: y = (2x + 5)^(1/2)
-- Misalkan u = 2x + 5, maka y = u^(1/2)
-- dy/du = (1/2)u^(-1/2)
-- du/dx = 2
-- dy/dx = (1/2)u^(-1/2) · 2 = u^(-1/2) = 1/√(2x + 5)
-
-**Contoh 3**: Tentukan turunan dari y = sin(x³)
-
-**Penyelesaian**:
-- Misalkan u = x³, maka y = sin(u)
-- dy/du = cos(u)
-- du/dx = 3x²
-- dy/dx = cos(u) · 3x² = 3x² cos(x³)
+**Langkah 5:** Ubah ke bentuk cosecan
+$$= -\csc^2 x$$
 
 ---
 
-## 6. Contoh Soal dan Pembahasan
+## Turunan Fungsi Secan
 
-### Contoh 1: Turunan Menggunakan Definisi
+### Teorema
 
-**Soal**: Jika f(x) = 10x - 5, cari f'(4) menggunakan definisi.
+$$\frac{d}{dx}(\sec x) = \sec x \tan x$$
 
-**Penyelesaian**:
+### Pembuktian
 
-Menggunakan definisi turunan:
-```
-f'(4) = lim[h→0] [f(4 + h) - f(4)] / h
-```
+Karena $\sec x = \frac{1}{\cos x} = (\cos x)^{-1}$, kita gunakan aturan rantai:
 
-Hitung f(4 + h):
-```
-f(4 + h) = 10(4 + h) - 5 = 40 + 10h - 5 = 35 + 10h
-```
+**Langkah 1:** Tuliskan dalam bentuk pangkat
+$$\sec x = (\cos x)^{-1}$$
 
-Hitung f(4):
-```
-f(4) = 10(4) - 5 = 40 - 5 = 35
-```
+**Langkah 2:** Terapkan aturan rantai
+$$\frac{d}{dx}(\sec x) = -1 \cdot (\cos x)^{-2} \cdot \frac{d}{dx}(\cos x)$$
 
-Substitusi:
-```
-f'(4) = lim[h→0] [(35 + 10h) - 35] / h
-      = lim[h→0] 10h / h
-      = lim[h→0] 10
-      = 10
-```
+**Langkah 3:** Substitusi turunan cos x
+$$= -(\cos x)^{-2} \cdot (-\sin x)$$
 
-**Jawaban**: f'(4) = 10
+**Langkah 4:** Sederhanakan
+$$= \frac{\sin x}{\cos^2 x}$$
+
+**Langkah 5:** Pisahkan pecahan
+$$= \frac{1}{\cos x} \cdot \frac{\sin x}{\cos x}$$
+
+**Langkah 6:** Ubah ke bentuk secan dan tangen
+$$= \sec x \tan x$$
 
 ---
 
-### Contoh 2: Turunan Fungsi Kubik
+## Turunan Fungsi Cosecan
 
-**Soal**: Jika f(x) = x³ + 5x, cari f'(c)
+### Teorema
 
-**Penyelesaian**:
+$$\frac{d}{dx}(\csc x) = -\csc x \cot x$$
 
-Gunakan aturan pangkat dan penjumlahan:
-```
-f(x) = x³ + 5x
-f'(x) = 3x² + 5
-```
+### Pembuktian
 
-Untuk nilai c tertentu:
-```
-f'(c) = 3c² + 5
-```
+Karena $\csc x = \frac{1}{\sin x} = (\sin x)^{-1}$:
 
-**Jawaban**: f'(c) = 3c² + 5
+**Langkah 1:** Tuliskan dalam bentuk pangkat
+$$\csc x = (\sin x)^{-1}$$
 
----
+**Langkah 2:** Terapkan aturan rantai
+$$\frac{d}{dx}(\csc x) = -1 \cdot (\sin x)^{-2} \cdot \frac{d}{dx}(\sin x)$$
 
-### Contoh 3: Turunan Fungsi Polinomial
+**Langkah 3:** Substitusi turunan sin x
+$$= -(\sin x)^{-2} \cdot (\cos x)$$
 
-**Soal**: Tentukan turunan dari fungsi y = (x² - 3x⁶ + 21)³
+**Langkah 4:** Sederhanakan
+$$= -\frac{\cos x}{\sin^2 x}$$
 
-**Penyelesaian**:
+**Langkah 5:** Pisahkan pecahan
+$$= -\frac{1}{\sin x} \cdot \frac{\cos x}{\sin x}$$
 
-Gunakan aturan rantai:
-- Misalkan u = x² - 3x⁶ + 21
-- Maka y = u³
-
-Hitung du/dx:
-```
-du/dx = 2x - 18x⁵
-```
-
-Hitung dy/du:
-```
-dy/du = 3u²
-```
-
-Gunakan aturan rantai:
-```
-dy/dx = (dy/du) · (du/dx)
-      = 3u² · (2x - 18x⁵)
-      = 3(x² - 3x⁶ + 21)² · (2x - 18x⁵)
-```
-
-**Jawaban**: dy/dx = 3(x² - 3x⁶ + 21)² · (2x - 18x⁵)
+**Langkah 6:** Ubah ke bentuk cosecan dan cotangen
+$$= -\csc x \cot x$$
 
 ---
 
-### Contoh 4: Turunan Fungsi Komposisi
+## Aturan Rantai pada Fungsi Trigonometri
 
-**Soal**: Tentukan turunan dari fungsi y = (3x + 5)(x² - 3)³
+### Prinsip Umum
 
-**Penyelesaian**:
+Jika u adalah fungsi dari x, maka:
 
-Fungsi ini memerlukan kombinasi aturan perkalian dan aturan rantai.
+| Fungsi | Turunan |
+|--------|---------|
+| sin u | cos u · (du/dx) |
+| cos u | -sin u · (du/dx) |
+| tan u | sec² u · (du/dx) |
+| cot u | -csc² u · (du/dx) |
+| sec u | sec u tan u · (du/dx) |
+| csc u | -csc u cot u · (du/dx) |
 
-Misalkan:
-- u = 3x + 5, dengan u' = 3
-- v = (x² - 3)³
+### Contoh Aplikasi Aturan Rantai
 
-Untuk mencari v', gunakan aturan rantai:
-- Misalkan w = x² - 3, maka v = w³
-- dw/dx = 2x
-- dv/dw = 3w²
-- v' = 3w² · 2x = 3(x² - 3)² · 2x = 6x(x² - 3)²
+**Contoh 1:** Tentukan turunan dari y = sin(3x²)
 
-Gunakan aturan perkalian:
-```
-y' = u'·v + u·v'
-   = 3·(x² - 3)³ + (3x + 5)·6x(x² - 3)²
-   = 3(x² - 3)³ + 6x(3x + 5)(x² - 3)²
-```
+**Penyelesaian:**
+- Misalkan u = 3x², maka du/dx = 6x
+- y = sin u
 
-Faktorkan (x² - 3)²:
-```
-y' = (x² - 3)²[3(x² - 3) + 6x(3x + 5)]
-   = (x² - 3)²[3x² - 9 + 18x² + 30x]
-   = (x² - 3)²[21x² + 30x - 9]
-   = 3(x² - 3)²[7x² + 10x - 3]
-```
+$$\frac{dy}{dx} = \cos u \cdot \frac{du}{dx} = \cos(3x^2) \cdot 6x = 6x\cos(3x^2)$$
 
-**Jawaban**: y' = 3(x² - 3)²(7x² + 10x - 3)
+**Contoh 2:** Tentukan turunan dari y = cos³(2x)
+
+**Penyelesaian:**
+- y = [cos(2x)]³
+- Misalkan v = cos(2x), maka y = v³
+- Turunan cos(2x) = -sin(2x) · 2 = -2sin(2x)
+
+$$\frac{dy}{dx} = 3v^2 \cdot \frac{dv}{dx} = 3\cos^2(2x) \cdot (-2\sin(2x)) = -6\cos^2(2x)\sin(2x)$$
 
 ---
 
-## 7. Latihan Soal
+## Contoh Soal dan Pembahasan
 
 ### Soal 1
-Dengan menggunakan definisi, tentukan turunan dari f(x) = 1/x
+**Tentukan $\frac{dy}{dx}$ dari $y = \sin^4(x^3 + 5)$**
 
-**Petunjuk**: Gunakan f'(c) = lim[h→0] [f(c+h) - f(c)]/h
+**Pembahasan:**
+
+Ini adalah fungsi komposit berlapis. Mari kita uraikan:
+- Fungsi terluar: u⁴
+- Fungsi tengah: sin(v)
+- Fungsi terdalam: v = x³ + 5
+
+**Langkah 1:** Identifikasi struktur
+$$y = [\sin(x^3 + 5)]^4$$
+
+**Langkah 2:** Terapkan aturan rantai secara bertahap
+
+Misalkan w = x³ + 5, maka dw/dx = 3x²
+
+Misalkan u = sin w, maka du/dw = cos w
+
+y = u⁴, maka dy/du = 4u³
+
+**Langkah 3:** Gunakan aturan rantai
+$$\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dw} \cdot \frac{dw}{dx}$$
+
+$$= 4u^3 \cdot \cos w \cdot 3x^2$$
+
+**Langkah 4:** Substitusi kembali
+$$= 4\sin^3(x^3 + 5) \cdot \cos(x^3 + 5) \cdot 3x^2$$
+
+$$\boxed{\frac{dy}{dx} = 12x^2 \sin^3(x^3 + 5) \cos(x^3 + 5)}$$
 
 ---
 
 ### Soal 2
-Tentukan turunan dari fungsi y = (x² - 3x⁶ + 21)³
+**Carilah turunan dari $y = \frac{1 - \cos x}{1 + \cos x}$**
 
-**Petunjuk**: Gunakan aturan rantai dengan u = x² - 3x⁶ + 21
+**Pembahasan:**
+
+Gunakan aturan hasil bagi dengan u = 1 - cos x dan v = 1 + cos x
+
+**Langkah 1:** Tentukan turunan pembilang dan penyebut
+- u = 1 - cos x → u' = sin x
+- v = 1 + cos x → v' = -sin x
+
+**Langkah 2:** Terapkan aturan hasil bagi
+$$\frac{dy}{dx} = \frac{u'v - uv'}{v^2}$$
+
+$$= \frac{(\sin x)(1 + \cos x) - (1 - \cos x)(-\sin x)}{(1 + \cos x)^2}$$
+
+**Langkah 3:** Jabarkan pembilang
+$$= \frac{\sin x + \sin x \cos x + \sin x - \sin x \cos x}{(1 + \cos x)^2}$$
+
+**Langkah 4:** Sederhanakan
+$$= \frac{2\sin x}{(1 + \cos x)^2}$$
+
+$$\boxed{\frac{dy}{dx} = \frac{2\sin x}{(1 + \cos x)^2}}$$
 
 ---
 
 ### Soal 3
-Tentukan turunan dari fungsi: y = (3x + 5)(x² - 3)³
+**Carilah turunan dari $y = \frac{\sin x \cdot \sec x}{1 + \tan x}$**
 
-**Petunjuk**: Gunakan aturan perkalian dikombinasikan dengan aturan rantai
+**Pembahasan:**
+
+**Langkah 1:** Sederhanakan terlebih dahulu
+Karena $\sec x = \frac{1}{\cos x}$:
+$$y = \frac{\sin x \cdot \frac{1}{\cos x}}{1 + \tan x} = \frac{\tan x}{1 + \tan x}$$
+
+**Langkah 2:** Gunakan aturan hasil bagi
+- u = tan x → u' = sec² x
+- v = 1 + tan x → v' = sec² x
+
+$$\frac{dy}{dx} = \frac{(\sec^2 x)(1 + \tan x) - (\tan x)(\sec^2 x)}{(1 + \tan x)^2}$$
+
+**Langkah 3:** Sederhanakan pembilang
+$$= \frac{\sec^2 x + \sec^2 x \tan x - \sec^2 x \tan x}{(1 + \tan x)^2}$$
+
+$$= \frac{\sec^2 x}{(1 + \tan x)^2}$$
+
+$$\boxed{\frac{dy}{dx} = \frac{\sec^2 x}{(1 + \tan x)^2}}$$
 
 ---
 
 ### Soal 4
-Tentukan turunan dari fungsi: y = 3x√(x⁴ - 6x² + 9)
+**Carilah turunan dari $y = \sqrt{\frac{a\cos^2 x + b\sin^2 x}{\cos^2 x}}$ dengan a dan b konstanta**
 
-**Petunjuk**: 
-- Tulis ulang akar sebagai pangkat 1/2
-- Gunakan aturan perkalian dan aturan rantai
+**Pembahasan:**
+
+**Langkah 1:** Sederhanakan ekspresi dalam akar
+$$y = \sqrt{\frac{a\cos^2 x + b\sin^2 x}{\cos^2 x}}$$
+
+$$= \sqrt{\frac{a\cos^2 x}{\cos^2 x} + \frac{b\sin^2 x}{\cos^2 x}}$$
+
+$$= \sqrt{a + b\tan^2 x}$$
+
+**Langkah 2:** Tuliskan dalam bentuk pangkat
+$$y = (a + b\tan^2 x)^{1/2}$$
+
+**Langkah 3:** Terapkan aturan rantai
+$$\frac{dy}{dx} = \frac{1}{2}(a + b\tan^2 x)^{-1/2} \cdot \frac{d}{dx}(a + b\tan^2 x)$$
+
+**Langkah 4:** Tentukan turunan bagian dalam
+$$\frac{d}{dx}(a + b\tan^2 x) = b \cdot 2\tan x \cdot \sec^2 x = 2b\tan x \sec^2 x$$
+
+**Langkah 5:** Gabungkan
+$$\frac{dy}{dx} = \frac{1}{2\sqrt{a + b\tan^2 x}} \cdot 2b\tan x \sec^2 x$$
+
+$$\boxed{\frac{dy}{dx} = \frac{b\tan x \sec^2 x}{\sqrt{a + b\tan^2 x}}}$$
 
 ---
 
 ### Soal 5
-Tentukan turunan dari fungsi: y = (x - 3)/(3x + 1)
+**Carilah turunan dari $y = \frac{2\sin^3 2x}{\cos^2 2x}$**
 
-**Petunjuk**: Gunakan aturan pembagian
+**Pembahasan:**
+
+**Langkah 1:** Sederhanakan ekspresi
+$$y = \frac{2\sin^3 2x}{\cos^2 2x} = 2\sin^3 2x \cdot \sec^2 2x$$
+
+Atau tulis sebagai:
+$$y = 2 \cdot \frac{\sin^3 2x}{\cos^2 2x} = 2\tan^2 2x \cdot \sin 2x$$
+
+**Pendekatan alternatif - gunakan aturan hasil bagi langsung:**
+
+- u = 2sin³(2x)
+- v = cos²(2x)
+
+**Langkah 2:** Tentukan u'
+$$u' = 2 \cdot 3\sin^2(2x) \cdot \cos(2x) \cdot 2 = 12\sin^2(2x)\cos(2x)$$
+
+**Langkah 3:** Tentukan v'
+$$v' = 2\cos(2x) \cdot (-\sin(2x)) \cdot 2 = -4\sin(2x)\cos(2x)$$
+
+**Langkah 4:** Terapkan aturan hasil bagi
+$$\frac{dy}{dx} = \frac{u'v - uv'}{v^2}$$
+
+$$= \frac{12\sin^2(2x)\cos(2x) \cdot \cos^2(2x) - 2\sin^3(2x) \cdot (-4\sin(2x)\cos(2x))}{\cos^4(2x)}$$
+
+**Langkah 5:** Sederhanakan pembilang
+$$= \frac{12\sin^2(2x)\cos^3(2x) + 8\sin^4(2x)\cos(2x)}{\cos^4(2x)}$$
+
+$$= \frac{4\sin^2(2x)\cos(2x)[3\cos^2(2x) + 2\sin^2(2x)]}{\cos^4(2x)}$$
+
+$$= \frac{4\sin^2(2x)[3\cos^2(2x) + 2\sin^2(2x)]}{\cos^3(2x)}$$
+
+Menggunakan identitas $\sin^2 + \cos^2 = 1$:
+$$= \frac{4\sin^2(2x)[3\cos^2(2x) + 2(1-\cos^2(2x))]}{\cos^3(2x)}$$
+
+$$= \frac{4\sin^2(2x)[\cos^2(2x) + 2]}{\cos^3(2x)}$$
+
+$$\boxed{\frac{dy}{dx} = \frac{4\sin^2(2x)(2 + \cos^2(2x))}{\cos^3(2x)}}$$
 
 ---
 
-### Soal 6
-Tentukan turunan dari fungsi: y = √(x - 7) + x/(x² - 1) - 9
+## Latihan Mandiri
 
-**Petunjuk**: 
-- Pisahkan menjadi tiga bagian
-- Gunakan aturan penjumlahan, aturan rantai untuk akar, dan aturan pembagian
+Kerjakan soal-soal berikut untuk mengasah pemahaman Anda:
+
+### Level Dasar
+
+1. Tentukan turunan dari y = sin(5x)
+2. Tentukan turunan dari y = cos(x² + 1)
+3. Tentukan turunan dari y = tan(3x)
+
+### Level Menengah
+
+4. Tentukan turunan dari y = sin²x · cos x
+5. Tentukan turunan dari y = sec(x³)
+6. Tentukan turunan dari $y = \frac{\sin x}{x}$
+
+### Level Lanjut
+
+7. Tentukan turunan dari y = sin(cos(tan x))
+8. Tentukan turunan dari $y = \sqrt{\sin x + \cos x}$
+9. Tentukan turunan dari $y = \frac{\tan x - 1}{\sec x}$
+10. Buktikan bahwa turunan dari arcsin(x) adalah $\frac{1}{\sqrt{1-x^2}}$
 
 ---
 
-## 8. Rangkuman
+## Ringkasan Rumus
 
-### Konsep Utama
+### Tabel Rumus Turunan Trigonometri Dasar
 
-1. **Definisi Turunan**: 
-   - f'(c) = lim[h→0] [f(c + h) - f(c)] / h
-   - Mengukur laju perubahan instantan fungsi
+| No | Fungsi f(x) | Turunan f'(x) |
+|----|-------------|---------------|
+| 1 | sin x | cos x |
+| 2 | cos x | -sin x |
+| 3 | tan x | sec² x |
+| 4 | cot x | -csc² x |
+| 5 | sec x | sec x · tan x |
+| 6 | csc x | -csc x · cot x |
 
-2. **Turunan Fungsi Konstan**: 
-   - Jika f(x) = k, maka f'(x) = 0
+### Tabel Rumus dengan Aturan Rantai
 
-3. **Aturan Dasar Turunan**:
-   - Konstanta: y = a → y' = 0
-   - Linear: y = ax → y' = a
-   - Pangkat: y = axⁿ → y' = anxⁿ⁻¹
-   - Penjumlahan: (u ± v)' = u' ± v'
-   - Perkalian: (u·v)' = u'v + uv'
-   - Pembagian: (u/v)' = (u'v - uv')/v²
+| No | Fungsi f(u) | Turunan (jika u = u(x)) |
+|----|-------------|-------------------------|
+| 1 | sin u | cos u · u' |
+| 2 | cos u | -sin u · u' |
+| 3 | tan u | sec² u · u' |
+| 4 | cot u | -csc² u · u' |
+| 5 | sec u | sec u · tan u · u' |
+| 6 | csc u | -csc u · cot u · u' |
 
-4. **Aturan Rantai**: 
-   - Untuk y = f(u) dan u = g(x)
-   - dy/dx = (dy/du) · (du/dx)
+### Limit Penting
 
-### Tips Menyelesaikan Soal Turunan
+$$\lim_{x \to 0} \frac{\sin x}{x} = 1$$
 
-1. **Identifikasi jenis fungsi** (pangkat, perkalian, pembagian, komposisi)
-2. **Pilih aturan yang tepat** berdasarkan struktur fungsi
-3. **Sederhanakan ekspresi** sebelum menurunkan jika memungkinkan
-4. **Gunakan aturan rantai** untuk fungsi komposisi
-5. **Periksa hasil** dengan menyederhanakan jawaban akhir
+$$\lim_{x \to 0} \frac{1 - \cos x}{x} = 0$$
 
-### Kesalahan Umum yang Harus Dihindari
+$$\lim_{x \to 0} \frac{\tan x}{x} = 1$$
 
-1. ❌ Menurunkan konstanta menjadi selain nol
-2. ❌ Lupa menggunakan aturan rantai pada fungsi komposisi
-3. ❌ Salah mengaplikasikan aturan perkalian: (uv)' ≠ u'v'
-4. ❌ Salah mengaplikasikan aturan pembagian
-5. ❌ Tidak menyederhanakan hasil akhir
+### Tips Mengingat
 
-### Aplikasi Turunan
-
-- **Menentukan kecepatan dan percepatan** dalam fisika
-- **Optimasi** dalam ekonomi dan teknik
-- **Analisis perubahan** dalam berbagai fenomena
-- **Menentukan titik maksimum dan minimum** fungsi
-- **Menggambar grafik** fungsi dengan lebih akurat
+1. **Sin dan Cos:** Sin → Cos (positif), Cos → -Sin (negatif)
+2. **Tan dan Cot:** Tan → Sec² (positif), Cot → -Csc² (negatif)
+3. **Sec dan Csc:** Keduanya mengandung dirinya sendiri dalam turunan
+   - Sec → Sec·Tan (positif)
+   - Csc → -Csc·Cot (negatif)
+4. **Pola tanda negatif:** Co-fungsi (cos, cot, csc) memiliki turunan negatif
 
 ---
 
 ## Referensi
 
-1. Stewart, J. (2015). *Calculus: Early Transcendentals*. Cengage Learning.
-2. Anton, H., Bivens, I., & Davis, S. (2012). *Calculus*. John Wiley & Sons.
-3. Thomas, G. B., Weir, M. D., & Hass, J. (2014). *Thomas' Calculus*. Pearson.
-4. Purcell, E. J., Varberg, D., & Rigdon, S. E. (2007). *Calculus*. Pearson Prentice Hall.
+1. Stewart, J. (2015). *Calculus: Early Transcendentals*. 8th Edition.
+2. Purcell, E. J., Varberg, D., & Rigdon, S. E. (2007). *Kalkulus*. Edisi 9.
+3. Materi Pertemuan 11: Turunan Fungsi Trigonometri - Nadiza Lediwara, S.T., M.Eng
 
 ---
 
-## Tentang Penyusun
-
-**Anindito , S.Kom., S.S., S.H., MTI., CHFI.**  
-Dosen Informatika
-Universitas Pertahanan RI
-
----
-
-*Materi ini disusun untuk keperluan pembelajaran kalkulus diferensial. Untuk pertanyaan atau diskusi lebih lanjut, silakan hubungi pengajar.*
+*Dokumen ini disusun untuk keperluan pembelajaran matematika tingkat perguruan tinggi.*
