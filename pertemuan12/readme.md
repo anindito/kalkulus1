@@ -4,6 +4,7 @@
 
 
 ---
+[Slide](https://anindito.github.io/kalkulus1/pertemuan12/)
 
 ## Daftar Isi
 
