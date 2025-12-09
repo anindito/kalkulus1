@@ -1,7 +1,6 @@
 # Turunan Fungsi Trigonometri
-## Materi Komprehensif Kalkulus
+## Pertemuan 11
 
-**Penyusun:** Berdasarkan materi Nadiza Lediwara, S.T., M.Eng
 
 ---
 
