@@ -6,6 +6,7 @@
 
 ---
 
+[Slide](https://anindito.github.io/kalkulus1/pertemuan13/)
 ## Daftar Isi
 
 1. [Pendahuluan](#1-pendahuluan)
